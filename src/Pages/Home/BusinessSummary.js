@@ -2,7 +2,7 @@ import React from "react";
 
 const BusinessSummary = () => {
   return (
-    <div className="max-w-7xl mx-auto mt-12 px-12 justify-center items-center text-center">
+    <div className="lg:max-w-7xl lg:mx-auto lg:mt-12 lg:px-12 justify-center items-center text-center">
       <div className="lg:w-60 lg:mr-8 stats stats-vertical lg:stats-horizontal shadow bg-primary text-white ">
         <div className="stat place-items-center">
           <div class="stat-figure text-secondary">

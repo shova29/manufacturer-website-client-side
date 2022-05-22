@@ -24,7 +24,9 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar max-w-7xl mx-auto px-12 shadow-lg rounded">
+    // <div className="max-w-full shadow-md">
+
+    <div className="navbar shadow-lg rounded">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex="0" className="btn btn-square btn-primary lg:hidden">
@@ -53,7 +55,7 @@ const Navbar = () => {
         <div class="ml-2 w-10 rounded-full">
           <img src={logo} alt={logo} />
         </div>
-        <p className="btn btn-ghost normal-case text-xl">Winged Wheels</p>
+        <p className="text-primary font-bold lg:text-xl">Winged Wheels</p>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
@@ -80,6 +82,7 @@ const Navbar = () => {
         </label>
       </div>
     </div>
+    // </div>
   );
 };
 
