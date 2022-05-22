@@ -4,17 +4,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "flowbite";
-import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <QueryClientProvider client={QueryClient}> */}
     <BrowserRouter>
       <App />
     </BrowserRouter>
-    {/* </QueryClientProvider> */}
   </React.StrictMode>
 );
 
