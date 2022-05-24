@@ -27,12 +27,12 @@ const Registration = () => {
   } = useForm();
 
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
   const [errorMessage, setErrorMessage] = useState("");
   const [token] = useToken(user || googleUser || githubUser);
-  const navigate = useNavigate();
   const customId = "custom-id-yes";
+  const navigate = useNavigate();
   let registrationError;
 
   if (loading || googleLoading || githubLoading || updating) {
