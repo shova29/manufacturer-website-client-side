@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import login from "../../assets/image/login.png";
 
 const Login = () => {
@@ -13,6 +14,9 @@ const Login = () => {
               <img src={login} className="w-full" alt={login} />
             </div>
             <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
+              <h2 className="text-cyan-700 text-center text-2xl font-bold mt-12 mb-6">
+                Login to Winged Wheels!
+              </h2>
               <form>
                 <div className="flex flex-row items-center justify-center lg:justify-start">
                   <p className="text-lg mb-0 mr-4">Continue with</p>
@@ -44,7 +48,7 @@ const Login = () => {
                     type="text"
                     className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-cyan-600 focus:outline-none"
                     id="exampleFormControlInput2"
-                    placeholder="Email address"
+                    placeholder="Email Address"
                   />
                 </div>
 
@@ -69,14 +73,14 @@ const Login = () => {
                       Forgot password?
                     </a>
                   </div>
-                  <p className="text-sm font-semibold mt-2 pt-1 mb-0">
+                  <p className="text-base font-semibold mt-2 pt-1 mb-0">
                     Don't have an account?
-                    <a
-                      href="#!"
-                      className="text-cyan-600 hover:text-cyan-700 focus:text-cyan-700 transition duration-200 ease-in-out"
+                    <Link
+                      className="text-cyan-700 hover:text-cyan-800 focus:text-cyan-800 transition duration-200 ease-in-out"
+                      to="/registration"
                     >
                       Register
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </form>
