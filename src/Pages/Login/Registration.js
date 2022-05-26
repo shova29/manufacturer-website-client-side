@@ -112,28 +112,27 @@ const Registration = () => {
                 <div className="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5">
                   <p className="text-center font-semibold mx-4 mb-0">Or</p>
                 </div>
-
                 <div className="mb-6">
-                  <div className="mb-6">
-                    <input
-                      type="name"
-                      className="block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-cyan-600 focus:outline-none"
-                      placeholder="Your Name"
-                      {...register("name", {
-                        required: {
-                          value: true,
-                          message: "Name is required",
-                        },
-                      })}
-                    />
-                    <label className="label">
-                      {errors.name?.type === "required" && (
-                        <span className="label-text-alt text-sm text-red-500">
-                          {errors.name.message}
-                        </span>
-                      )}
-                    </label>
-                  </div>
+                  <input
+                    type="name"
+                    className="block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-cyan-600 focus:outline-none"
+                    placeholder="Your Name"
+                    {...register("name", {
+                      required: {
+                        value: true,
+                        message: "Name is required",
+                      },
+                    })}
+                  />
+                  <label className="label">
+                    {errors.name?.type === "required" && (
+                      <span className="label-text-alt text-sm text-red-500">
+                        {errors.name.message}
+                      </span>
+                    )}
+                  </label>
+                </div>
+                <div className="mb-6">
                   <input
                     type="email"
                     placeholder="Your Email"
