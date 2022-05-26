@@ -73,7 +73,9 @@ const Navbar = () => {
         <div className="ml-2 w-10 rounded-full">
           <img src={logo} alt={logo} />
         </div>
-        <p className="text-primary font-bold lg:text-xl">Winged Wheels</p>
+        <p className=" font-bold lg:text-xl">
+          Winged <span className="text-primary">Wheels</span>
+        </p>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
