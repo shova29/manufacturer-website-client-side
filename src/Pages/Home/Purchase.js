@@ -9,35 +9,36 @@ import usePartDetails from "../../hooks/usePartDetails";
 import useParts from "../../hooks/useParts";
 import Loading from "../Shared/Loading";
 
-const PartDetails = () => {
+const Purchase = () => {
   const { partId } = useParams();
-  const { parts, reload, setReload } = usePartDetails(partId);
+  const { parts, reload } = usePartDetails(partId);
   const [user] = useAuthState(auth);
   const customId = "custom-id-yes";
-  // let min = parts.minQuantity;
-  // let max = parts.availableQuantity;
-  let quantity;
   const {
     register,
-    formState: { errors },
+    formState: { errors, isValid },
     handleSubmit,
+    getValues,
     reset,
-    isDirty,
-    isValid,
   } = useForm({ mode: "onChange" });
   if (reload) {
     return <Loading></Loading>;
   }
 
   const onSubmit = (data) => {
-    data.email = user?.email;
-
-    const purchase = {
+    // data.email = user?.email;
+    data.quantity = parseFloat(getValues("quantity"));
+    data.price =
+      parseFloat(getValues("quantity")) * parseFloat(parts.perUnitPrice);
+    data.parts = parts?.name;
+    /*  const purchase = {
       partId: parts._id,
-      part: parts.name,
+      parts: parts.name,
       userName: user.displayName,
       userEmail: user.email,
-    };
+      address: data.address,
+      phoneNumber: data.phoneNumber,
+    }; */
     const url = `http://localhost:5000/purchase`;
     fetch(url, {
       method: "POST",
@@ -48,7 +49,7 @@ const PartDetails = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        // console.log(result);
+        console.log(result);
         if (result) {
           reset();
           toast.success(`${parts?.name} Purchase Successfully!!`, {
@@ -100,7 +101,7 @@ const PartDetails = () => {
           <h2 className="text-cyan-700 text-center text-2xl font-bold mb-6">
             Purchase Form
           </h2>
-          <form onSubmit={handleSubmit(onSubmit)} className="">
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-4">
               <label className="label">
                 <span className="label-text">Name</span>
@@ -153,16 +154,10 @@ const PartDetails = () => {
                     value: true,
                     message: "Address is required",
                   },
-                  maxLength: 30,
                 })}
               />
               <label className="label">
                 {errors.address?.type === "required" && (
-                  <span className="label-text-alt text-sm text-red-500">
-                    {errors.address.message}
-                  </span>
-                )}
-                {errors.address?.type === "maxLength" && (
                   <span className="label-text-alt text-sm text-red-500">
                     {errors.address.message}
                   </span>
@@ -183,7 +178,10 @@ const PartDetails = () => {
                     value: true,
                     message: "Phone Number is required",
                   },
-                  maxLength: 15,
+                  maxLength: {
+                    value: 11,
+                    message: "Phone Number must be 11 digit.",
+                  },
                 })}
               />{" "}
               <label className="label">
@@ -241,40 +239,11 @@ const PartDetails = () => {
                 )}
               </label>
             </div>
-            {/* <div className="mb-4">
-              <label className="label">
-                <span className="label-text">Total Price</span>
-              </label>
-              <input
-                type="number"
-                placeholder="Total Price"
-                onChange={parts?.minQuantity * parts?.perUnitPrice}
-                className="block w-full px-4 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-cyan-700 focus:outline-none"
-                {...register("price", {
-                  required: {
-                    value: `${parts?.minQuantity * parts?.perUnitPrice}`,
-                  },
-                })}
-              />
-              
-            </div>{" "} */}
             <div className="text-left lg:text-center">
               <button
                 type="submit"
-                // disabled={
-                //   min < parts.minQuantity && max > parts.availableQuantity
-                //     ? true
-                //     : false
-                // }
-                className="inline-block px-7 py-3 bg-cyan-600 text-white font-medium text-sm  uppercase rounded shadow-md  focus:outline-none focus:ring-0 active:bg-cyan-800 active:shadow-lg transition duration-150 ease-in-out cursor-not-alloweds"
-                // disabled hover:bg-cyan-700 hover:shadow-lg focus:bg-cyan-700 focus:shadow-lg
-                // disabled={!isDirty || !isValid}
-                disabled={
-                  quantity < parts?.minQuantity &&
-                  quantity > parts?.availableQuantity
-                    ? true
-                    : false
-                }
+                disabled={!isValid}
+                className="inline-block px-7 py-3 bg-cyan-600 text-white font-medium text-sm  uppercase rounded shadow-md  focus:outline-none focus:ring-0 active:bg-cyan-800 active:shadow-lg transition duration-150 ease-in-out"
               >
                 Purchase
               </button>
@@ -286,4 +255,4 @@ const PartDetails = () => {
   );
 };
 
-export default PartDetails;
+export default Purchase;

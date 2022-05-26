@@ -12,45 +12,45 @@ const Footer = () => {
     <div>
       <footer className="footer p-10 bg-neutral text-neutral-content">
         <div>
-          <span class="footer-title">Services</span>
-          <a class="hover:text-primary">Branding</a>
-          <a class="hover:text-primary">Design</a>
-          <a class="hover:text-primary">Marketing</a>
-          <a class="hover:text-primary">Advertisement</a>
+          <span className="footer-title">Services</span>
+          <a className="hover:text-primary">Branding</a>
+          <a className="hover:text-primary">Design</a>
+          <a className="hover:text-primary">Marketing</a>
+          <a className="hover:text-primary">Advertisement</a>
         </div>
         <div>
-          <span class="footer-title">Company</span>
-          <a class="hover:text-primary">About us</a>
-          <a class="hover:text-primary">Contact</a>
-          <a class="hover:text-primary">Jobs</a>
-          <a class="hover:text-primary">Press kit</a>
+          <span className="footer-title">Company</span>
+          <a className="hover:text-primary">About us</a>
+          <a className="hover:text-primary">Contact</a>
+          <a className="hover:text-primary">Jobs</a>
+          <a className="hover:text-primary">Press kit</a>
         </div>
         <div>
-          <span class="footer-title">Legal</span>
-          <a class="hover:text-primary">Terms of use</a>
-          <a class="hover:text-primary">Privacy policy</a>
-          <a class="hover:text-primary">Cookie policy</a>
+          <span className="footer-title">Legal</span>
+          <a className="hover:text-primary">Terms of use</a>
+          <a className="hover:text-primary">Privacy policy</a>
+          <a className="hover:text-primary">Cookie policy</a>
         </div>
         <div>
-          <span class="footer-title">Social</span>
-          <a class="hover:text-primary">Twitter</a>
-          <a class="hover:text-primary">Instagram</a>
-          <a class="hover:text-primary">Facebook</a>
-          <a class="hover:text-primary">Github</a>
+          <span className="footer-title">Social</span>
+          <a className="hover:text-primary">Twitter</a>
+          <a className="hover:text-primary">Instagram</a>
+          <a className="hover:text-primary">Facebook</a>
+          <a className="hover:text-primary">Github</a>
         </div>
         <div>
-          <span class="footer-title">Explore</span>
-          <a class="hover:text-primary">Features</a>
-          <a class="hover:text-primary">Enterprise</a>
-          <a class="hover:text-primary">Security</a>
-          <a class="hover:text-primary">Pricing</a>
+          <span className="footer-title">Explore</span>
+          <a className="hover:text-primary">Features</a>
+          <a className="hover:text-primary">Enterprise</a>
+          <a className="hover:text-primary">Security</a>
+          <a className="hover:text-primary">Pricing</a>
         </div>
         <div>
-          <span class="footer-title">Apps</span>
-          <a class="hover:text-primary">Mac</a>
-          <a class="hover:text-primary">Windows</a>
-          <a class="hover:text-primary">iPhone</a>
-          <a class="hover:text-primary">Android</a>
+          <span className="footer-title">Apps</span>
+          <a className="hover:text-primary">Mac</a>
+          <a className="hover:text-primary">Windows</a>
+          <a className="hover:text-primary">iPhone</a>
+          <a className="hover:text-primary">Android</a>
         </div>
       </footer>
       <footer className="footer px-10 py-4 border-t bg-neutral text-neutral-content border-base-300">

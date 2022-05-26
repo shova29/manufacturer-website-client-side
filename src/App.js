@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Blogs from "./Pages/Blogs/Blogs";
 import Home from "./Pages/Home/Home";
-import PartDetails from "./Pages/Home/PartDetails";
+import Purchase from "./Pages/Home/Purchase";
 import Login from "./Pages/Login/Login";
 import ProtectedRoute from "./Pages/Login/ProtectedRoute";
 import Registration from "./Pages/Login/Registration";
@@ -23,7 +23,7 @@ function App() {
           path="/part/:partId"
           element={
             <ProtectedRoute>
-              <PartDetails></PartDetails>
+              <Purchase></Purchase>
             </ProtectedRoute>
           }
         ></Route>

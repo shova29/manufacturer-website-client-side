@@ -27,7 +27,7 @@ const Registration = () => {
   } = useForm();
 
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    useCreateUserWithEmailAndPassword(auth);
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
   const [errorMessage, setErrorMessage] = useState("");
   const [token] = useToken(user || googleUser || githubUser);
