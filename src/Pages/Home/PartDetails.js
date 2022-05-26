@@ -16,6 +16,7 @@ const PartDetails = () => {
   const customId = "custom-id-yes";
   // let min = parts.minQuantity;
   // let max = parts.availableQuantity;
+  let quantity;
   const {
     register,
     formState: { errors },
@@ -31,7 +32,7 @@ const PartDetails = () => {
   const onSubmit = (data) => {
     data.email = user?.email;
 
-    const booking = {
+    const purchase = {
       partId: parts._id,
       part: parts.name,
       userName: user.displayName,
@@ -135,7 +136,7 @@ const PartDetails = () => {
                 value={parts?.name}
                 readOnly
                 placeholder="Parts Name"
-                className="block w-full px-4 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-cyan-700 focus:outline-none"
+                className="block w-full px-4 py-2 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-cyan-700 focus:outline-none"
                 {...register("parts")}
               />
             </div>
@@ -152,7 +153,7 @@ const PartDetails = () => {
                     value: true,
                     message: "Address is required",
                   },
-                  maxLength: 20,
+                  maxLength: 30,
                 })}
               />
               <label className="label">
@@ -161,7 +162,7 @@ const PartDetails = () => {
                     {errors.address.message}
                   </span>
                 )}
-                {errors.address?.type === "minLength" && (
+                {errors.address?.type === "maxLength" && (
                   <span className="label-text-alt text-sm text-red-500">
                     {errors.address.message}
                   </span>
@@ -173,7 +174,7 @@ const PartDetails = () => {
                 <span className="label-text">Phone Number</span>
               </label>
               <input
-                type="text"
+                type="number"
                 name="phone"
                 placeholder="Phone Number"
                 className="block w-full px-4 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-cyan-600 focus:outline-none"
@@ -209,7 +210,6 @@ const PartDetails = () => {
                 {...register("quantity", {
                   required: {
                     value: `${parts?.minQuantity}`,
-                    // value: true,
                     message: "Quantity is required",
                   },
                   min: {
@@ -241,7 +241,7 @@ const PartDetails = () => {
                 )}
               </label>
             </div>
-            <div className="mb-4">
+            {/* <div className="mb-4">
               <label className="label">
                 <span className="label-text">Total Price</span>
               </label>
@@ -256,14 +256,8 @@ const PartDetails = () => {
                   },
                 })}
               />
-              {/* <label className="label">
-                {errors.price?.type === "required" && (
-                  <span className="label-text-alt text-sm text-red-500">
-                    {errors.price.message}
-                  </span>
-                )}
-              </label> */}
-            </div>{" "}
+              
+            </div>{" "} */}
             <div className="text-left lg:text-center">
               <button
                 type="submit"
@@ -272,9 +266,15 @@ const PartDetails = () => {
                 //     ? true
                 //     : false
                 // }
-                className="inline-block px-7 py-3 bg-cyan-600 text-white font-medium text-sm  uppercase rounded shadow-md hover:bg-cyan-700 hover:shadow-lg focus:bg-cyan-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-cyan-800 active:shadow-lg transition duration-150 ease-in-out cursor-not-alloweds"
-                // disabled
-                disabled={!isDirty || !isValid}
+                className="inline-block px-7 py-3 bg-cyan-600 text-white font-medium text-sm  uppercase rounded shadow-md  focus:outline-none focus:ring-0 active:bg-cyan-800 active:shadow-lg transition duration-150 ease-in-out cursor-not-alloweds"
+                // disabled hover:bg-cyan-700 hover:shadow-lg focus:bg-cyan-700 focus:shadow-lg
+                // disabled={!isDirty || !isValid}
+                disabled={
+                  quantity < parts?.minQuantity &&
+                  quantity > parts?.availableQuantity
+                    ? true
+                    : false
+                }
               >
                 Purchase
               </button>
