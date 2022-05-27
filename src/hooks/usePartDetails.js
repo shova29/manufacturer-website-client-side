@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
-import useParts from "./useParts";
 
 const usePartDetails = (partId) => {
-  const [parts, setParts] = useParts({});
+  const [parts, setParts] = useState({});
   const [reload, setReload] = useState(false);
   useEffect(() => {
-    const url = `http://localhost:5000/part/${partId}`;
+    const url = `https://evening-escarpment-83437.herokuapp.com/part/${partId}`;
 
     fetch(url)
       .then((response) => response.json())
       .then((data) => setParts(data));
-  }, [partId, reload]);
+  }, [partId, setParts, reload]);
 
   return {
     parts,
+    setParts,
     reload,
     setReload,
   };

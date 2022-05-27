@@ -3,6 +3,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Blogs from "./Pages/Blogs/Blogs";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 import Home from "./Pages/Home/Home";
 import Purchase from "./Pages/Home/Purchase";
 import Login from "./Pages/Login/Login";
@@ -24,6 +25,14 @@ function App() {
           element={
             <ProtectedRoute>
               <Purchase></Purchase>
+            </ProtectedRoute>
+          }
+        ></Route>
+        <Route
+          path="dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
             </ProtectedRoute>
           }
         ></Route>

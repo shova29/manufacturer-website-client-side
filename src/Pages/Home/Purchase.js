@@ -11,7 +11,7 @@ import Loading from "../Shared/Loading";
 
 const Purchase = () => {
   const { partId } = useParams();
-  const { parts, reload } = usePartDetails(partId);
+  const { parts, reload, setReload } = usePartDetails(partId);
   const [user] = useAuthState(auth);
   const customId = "custom-id-yes";
   const {
@@ -39,7 +39,7 @@ const Purchase = () => {
       address: data.address,
       phoneNumber: data.phoneNumber,
     }; */
-    const url = `http://localhost:5000/purchase`;
+    const url = `https://evening-escarpment-83437.herokuapp.com/purchase`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -52,6 +52,7 @@ const Purchase = () => {
         console.log(result);
         if (result) {
           reset();
+          setReload(!reload);
           toast.success(`${parts?.name} Purchase Successfully!!`, {
             toastId: customId,
           });
