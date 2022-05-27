@@ -9,7 +9,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="">
       <footer className="footer p-10 bg-neutral text-neutral-content">
         <div>
           <span className="footer-title">Services</span>

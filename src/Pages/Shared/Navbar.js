@@ -44,8 +44,6 @@ const Navbar = () => {
   );
 
   return (
-    // <div className="max-w-full shadow-md">
-
     <div className="navbar shadow-lg rounded">
       <div className="navbar-start">
         <div className="dropdown">
@@ -104,7 +102,6 @@ const Navbar = () => {
         </label>
       </div>
     </div>
-    // </div>
   );
 };
 

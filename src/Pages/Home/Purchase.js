@@ -98,7 +98,7 @@ const Purchase = () => {
             </p>
           </div>
         </div>
-        <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12  mb-12 md:mb-0 block p-6  h-full rounded-lg shadow-lg bg-white">
+        <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12  mb-12 md:mb-0 block p-6 lg:mt-4 md:mt-10 sm:mt-16 h-full rounded-lg shadow-lg bg-white">
           <h2 className="text-cyan-700 text-center text-2xl font-bold mb-6">
             Purchase Form
           </h2>

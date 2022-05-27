@@ -3,7 +3,10 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Blogs from "./Pages/Blogs/Blogs";
+import AddReview from "./Pages/Dashboard/AddReview";
 import Dashboard from "./Pages/Dashboard/Dashboard";
+import MyOrders from "./Pages/Dashboard/MyOrders";
+import Users from "./Pages/Dashboard/Users";
 import Home from "./Pages/Home/Home";
 import Purchase from "./Pages/Home/Purchase";
 import Login from "./Pages/Login/Login";
@@ -35,7 +38,11 @@ function App() {
               <Dashboard />
             </ProtectedRoute>
           }
-        ></Route>
+        >
+          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path="users" element={<Users></Users>}></Route>
+          <Route path="addReview" element={<AddReview></AddReview>}></Route>
+        </Route>
         <Route path="registration" element={<Registration />} />
         <Route path="login" element={<Login />} />
         <Route path="blogs" element={<Blogs />} />
