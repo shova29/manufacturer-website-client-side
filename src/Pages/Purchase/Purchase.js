@@ -11,7 +11,7 @@ import Loading from "../Shared/Loading";
 
 const Purchase = () => {
   const { partId } = useParams();
-  const { parts, reload, setReload } = usePartDetails(partId);
+  const { parts } = usePartDetails(partId);
   const [user] = useAuthState(auth);
   const customId = "custom-id-yes";
   const {
@@ -21,15 +21,10 @@ const Purchase = () => {
     getValues,
     reset,
   } = useForm({ mode: "onChange" });
-  if (reload) {
-    return <Loading></Loading>;
-  }
 
   const onSubmit = (data) => {
-    // data.email = user?.email;
-    data.quantity = parseFloat(getValues("quantity"));
-    data.price =
-      parseFloat(getValues("quantity")) * parseFloat(parts.perUnitPrice);
+    data.quantity = parseInt(getValues("quantity"));
+    data.price = parseInt(getValues("quantity")) * parseInt(parts.perUnitPrice);
     data.parts = parts?.name;
     /*  const purchase = {
       partId: parts._id,
@@ -39,7 +34,7 @@ const Purchase = () => {
       address: data.address,
       phoneNumber: data.phoneNumber,
     }; */
-    const url = `https://evening-escarpment-83437.herokuapp.com/purchase`;
+    const url = `http://localhost:5000/purchase`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -52,12 +47,12 @@ const Purchase = () => {
         console.log(result);
         if (result) {
           reset();
-          setReload(!reload);
+          // setReload(!reload);
           toast.success(`${parts?.name} Purchase Successfully!!`, {
             toastId: customId,
           });
         } else
-          toast.error(` Purchase Successfully!!`, {
+          toast.error(`Purchase Successfully!!`, {
             toastId: customId,
           });
       });
@@ -213,12 +208,11 @@ const Purchase = () => {
                   },
                   min: {
                     value: `${parts?.minQuantity}`,
-                    message: "Purchase atleast minimum order quantity.",
+                    message: `Purchase atleast minimum ${parts?.minQuantity} quantity.`,
                   },
                   max: {
                     value: `${parts?.availableQuantity}`,
-                    message:
-                      "Purchase can't be higher than available quantity.",
+                    message: `Purchase can't be higher than ${parts?.availableQuantity} available quantity.`,
                   },
                 })}
               />
@@ -241,13 +235,19 @@ const Purchase = () => {
               </label>
             </div>
             <div className="text-left lg:text-center">
-              <button
+              {/* <button
                 type="submit"
                 disabled={!isValid}
-                className="inline-block px-7 py-3 bg-cyan-600 text-white font-medium text-sm  uppercase rounded shadow-md  focus:outline-none focus:ring-0 active:bg-cyan-800 active:shadow-lg transition duration-150 ease-in-out"
+                className="inline-block px-7 py-3 bg-cyan-600 text-white font-medium text-sm  uppercase rounded shadow-md transition duration-150 ease-in-out"
               >
                 Purchase
-              </button>
+              </button> */}
+              <input
+                type="submit"
+                disabled={!isValid}
+                className="btn btn-primary w-full text-white text-sm uppercase"
+                value="Purchase"
+              />
             </div>
           </form>
         </div>

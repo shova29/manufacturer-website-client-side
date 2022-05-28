@@ -1,9 +1,9 @@
 import React from "react";
 import { useQuery } from "react-query";
 import Loading from "../Shared/Loading";
-import UserRow from "./UserRow";
+import User from "./User";
 
-const Users = () => {
+const MakeAdmin = () => {
   const {
     data: users,
     isLoading,
@@ -33,12 +33,12 @@ const Users = () => {
           </thead>
           <tbody>
             {users?.map((user, index) => (
-              <UserRow
+              <User
                 key={user?._id}
                 user={user}
                 refetch={refetch}
                 index={index}
-              ></UserRow>
+              ></User>
             ))}
           </tbody>
         </table>
@@ -47,4 +47,4 @@ const Users = () => {
   );
 };
 
-export default Users;
+export default MakeAdmin;

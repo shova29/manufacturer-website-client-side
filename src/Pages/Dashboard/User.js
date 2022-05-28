@@ -1,7 +1,7 @@
 import React from "react";
 import { toast } from "react-toastify";
 
-const UserRow = ({ user, index, refetch }) => {
+const User = ({ user, index, refetch }) => {
   const { email, role } = user;
   const makeAdmin = () => {
     fetch(`http://localhost:5000/user/admin/${email}`, {
@@ -12,7 +12,7 @@ const UserRow = ({ user, index, refetch }) => {
     })
       .then((res) => {
         if (res.status === 403) {
-          toast.error("Failed to make an Admin!");
+          toast.error(`Failed to make ${email} an Admin!`);
         }
         return res.json();
       })
@@ -28,11 +28,6 @@ const UserRow = ({ user, index, refetch }) => {
       <th>{index + 1}</th>
       <td>{email}</td>
       <td>
-        {/* {role !== "admin" && (
-          <button onClick={makeAdmin} className="btn btn-xs">
-            Make Admin
-          </button>
-        )} */}
         {role === "admin" ? (
           <button className="btn btn-xs">Already Admin</button>
         ) : (
@@ -42,10 +37,10 @@ const UserRow = ({ user, index, refetch }) => {
         )}
       </td>
       <td>
-        <button className="btn btn-xs btn-error">Remove User</button>
+        <button className="btn btn-xs btn-error">Remove Admin</button>
       </td>
     </tr>
   );
 };
 
-export default UserRow;
+export default User;
