@@ -11,11 +11,12 @@ const OurTeam = () => {
         <div className="flex flex-wrap -mx-4">
           <div className="w-full px-4">
             <div className="text-center mx-auto mb-[60px] max-w-[510px]">
-              <span className="font-bold text-xl text-primary mb-2 block">
+              <span className="font-bold text-2xl text-primary mb-2 block">
                 Our Team
               </span>
               <h2
                 className="
+                  text-slate-500 
                     font-bold
                     text-3xl
                     sm:text-4xl
@@ -24,7 +25,7 @@ const OurTeam = () => {
                     mb-4
                     "
               >
-                Our Awesome Team
+                Our Awesome <span className="text-primary text-5xl"> Team</span>
               </h2>
             </div>
           </div>

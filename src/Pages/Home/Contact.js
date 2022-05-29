@@ -7,12 +7,12 @@ const Contact = () => {
         <div className="flex flex-wrap lg:justify-between -mx-4">
           <div className="w-full lg:w-1/2 xl:w-6/12 px-4">
             <div className="max-w-[570px] mb-12 lg:mb-0">
-              <span className="block mb-4 text-base text-primary font-semibold">
+              <span className="block mb-4 text-xl text-primary font-semibold">
                 Contact Us
               </span>
               <h2
                 className="
-                    text-dark
+                  text-slate-500
                     mb-6
                     uppercase
                     font-bold
@@ -52,7 +52,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div className="w-full">
-                  <h4 className="font-bold text-dark text-xl mb-1">
+                  <h4 className="text-slate-500 font-bold text-dark text-xl mb-1">
                     Our Location
                   </h4>
                   <p className="text-base text-body-color">
@@ -90,7 +90,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div className="w-full">
-                  <h4 className="font-bold text-dark text-xl mb-1">
+                  <h4 className="text-slate-500 font-bold text-dark text-xl mb-1">
                     Phone Number
                   </h4>
                   <p className="text-base text-body-color">
@@ -126,7 +126,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div className="w-full">
-                  <h4 className="font-bold text-dark text-xl mb-1">
+                  <h4 className="text-slate-500 font-bold text-dark text-xl mb-1">
                     Email Address
                   </h4>
                   <p className="text-base text-body-color">

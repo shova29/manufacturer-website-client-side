@@ -17,9 +17,6 @@ const Navbar = () => {
       <li className="lg:ml-28">
         <Link to="/">Home</Link>
       </li>
-      {/* <li>
-        <Link to="/purchase">Purchase</Link>
-      </li> */}
       {user && (
         <li>
           <Link to="/dashboard">Dashboard</Link>
@@ -33,7 +30,10 @@ const Navbar = () => {
       </li>
       <li className="">
         {user ? (
-          <button className="btn btn-ghost" onClick={signout}>
+          <button
+            className="btn btn-ghost text-slate-500 font-bold"
+            onClick={signout}
+          >
             Log Out
           </button>
         ) : (
@@ -64,7 +64,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex="0"
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-compact dropdown-content mt-3 p-2 text-slate-500 font-bold shadow bg-base-100 rounded-box w-52"
           >
             {" "}
             {menuItems}
@@ -73,12 +73,14 @@ const Navbar = () => {
         <div className="ml-2 w-10 rounded-full">
           <img src={logo} alt={logo} />
         </div>
-        <p className=" font-bold lg:text-xl">
+        <p className="text-slate-500 font-bold lg:text-xl">
           Winged <span className="text-primary">Wheels</span>
         </p>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal p-0">{menuItems}</ul>
+        <ul className="menu menu-horizontal p-0 text-slate-500 font-bold">
+          {menuItems}
+        </ul>
       </div>
       <div className="navbar-end">
         <label

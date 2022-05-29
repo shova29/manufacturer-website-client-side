@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Review = ({ productReview }) => {
   const { reviews, name, image, address, rating } = productReview;
   return (
-    <div className="mx-auto rounded mt-6 mb-6 my-6">
+    <div className="mx-auto rounded mt-6 mb-6 my-6 ">
       {" "}
       <div className="md:w-96 w-36 flex justify-center items-center mb-6 lg:mb-0 mx-auto md:mx-0">
         <img
@@ -15,19 +15,10 @@ const Review = ({ productReview }) => {
               ? image
               : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png"
           }
-          className="w-24 rounded-full shadow-md"
+          className="w-24 rounded-full shadow-md mb-4"
           alt="Client"
         />
       </div>
-      {/* <div className="md:ml-6">
-        <p className="text-gray-500 font-light mb-6">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam
-          sapiente molestiae numquam quas, voluptates omnis nulla ea odio quia
-          similique corrupti magnam.
-        </p>
-        <p className="font-semibold text-xl mb-2 text-gray-800">Anna Smith</p>
-        <p className="font-semibold text-gray-500 mb-0">Product manager</p>
-      </div> */}
       <div className="text-center mt-1 col-md-6 col-lg-6 col-xl-6">
         <h5 className="font-bold">{name}</h5>
         <p className="text-gray-500 font-bold mb-2 mb-md-0 hover:text-primary">

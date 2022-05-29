@@ -11,15 +11,16 @@ const Reviews = () => {
   }, []);
   return (
     <section className="mt-16 p-6 md:p-12 text-center md:text-left rounded-md">
-      <h2 className="text-center lg:text-3xl font-extrabold mt-12">
-        What Beloved<span className="text-primary "> Client </span> Says
+      <h2 className="text-slate-500 text-center lg:text-2xl font-bold mt-12">
+        What Our{" "}
+        <span className="text-primary text-4xl "> Beloved Client </span> Says
       </h2>
       <div className="container mx-auto py-5 mt-8">
         <div className="row justify-content-center mb-3">
           <div className="col-md-12 col-xl-10">
             <div className="card shadow-0 rounded-3">
-              <div className="card-body bg-white shadow-lg">
-                <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 shadow-lg">
+              <div className="card-body  bg-primary bg-opacity-5 shadow-lg">
+                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                   {productReviews?.map((productReview) => (
                     <Review
                       key={productReview._id}
