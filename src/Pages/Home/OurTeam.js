@@ -11,7 +11,7 @@ const OurTeam = () => {
         <div className="flex flex-wrap -mx-4">
           <div className="w-full px-4">
             <div className="text-center mx-auto mb-[60px] max-w-[510px]">
-              <span className="font-semibold text-lg text-primary mb-2 block">
+              <span className="font-bold text-xl text-primary mb-2 block">
                 Our Team
               </span>
               <h2
@@ -26,10 +26,6 @@ const OurTeam = () => {
               >
                 Our Awesome Team
               </h2>
-              <p className="text-base text-body-color">
-                There are many variations of passages of Lorem Ipsum available
-                but the majority have suffered alteration in some form.
-              </p>
             </div>
           </div>
         </div>

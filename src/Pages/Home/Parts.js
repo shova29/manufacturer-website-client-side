@@ -12,7 +12,9 @@ const Parts = () => {
         <h3 className="uppercase text-primary text-xl font-bold">
           Bicycle Parts
         </h3>
-        <h2 className="text-4xl mt-4">Parts that Winged Wheels Provide</h2>
+        <h2 className="text-4xl mt-4 font-bold">
+          Parts that Winged Wheels Provide
+        </h2>
       </div>
       {reload ? (
         <div className="container mt-6">
