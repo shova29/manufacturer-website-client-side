@@ -14,6 +14,7 @@ import ManageAllOrders from "./Pages/Dashboard/ManageAllOrders";
 import ManageProducts from "./Pages/Dashboard/ManageProducts";
 import MyOrders from "./Pages/Dashboard/MyOrders";
 import MyProfile from "./Pages/Dashboard/MyProfile";
+import Payment from "./Pages/Dashboard/Payment";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import ProtectedRoute from "./Pages/Login/ProtectedRoute";
@@ -96,14 +97,7 @@ function App() {
             ></Route>
           )}
           <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
-          {/*  <Route
-            path="users"
-            element={
-              <RequireAdmin>
-                <Users></Users>
-              </RequireAdmin>
-            }
-          ></Route> */}
+          <Route path="payment/:id" element={<Payment></Payment>}></Route>
         </Route>
         <Route path="registration" element={<Registration />} />
         <Route path="login" element={<Login />} />

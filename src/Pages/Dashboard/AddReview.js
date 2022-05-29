@@ -42,9 +42,9 @@ const AddReview = () => {
           <textarea
             className="input input-bordered input-secondary w-full max-w-lg h-12 mb-3"
             placeholder="Address"
-            {...register("Address", { required: true })}
+            {...register("address", { required: true })}
           />{" "}
-          {errors.Address?.type === "required" && "Address is required"}
+          {errors.address?.type === "required" && "Address is required"}
           <textarea
             className="input input-bordered input-secondary w-full max-w-lg h-24 mb-3"
             placeholder="Review"
