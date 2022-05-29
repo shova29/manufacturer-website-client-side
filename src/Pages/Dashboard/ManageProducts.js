@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useQuery } from "react-query";
 import useParts from "../../hooks/useParts";
-import Product from "../Home/Product";
+
 import Loading from "../Shared/Loading";
 import DeleteConfirmation from "./DeleteConfirmation";
+import Product from "./Product";
 
 const ManageProducts = () => {
-  //   const [deletingProducts, setDeletingProducts] = useState(null);
   const { parts, setParts } = useParts();
   const {
     data: products,
@@ -31,7 +31,7 @@ const ManageProducts = () => {
             <tr>
               <th></th>
               <th>Name</th>
-              <th>Avatar</th>
+              <th>Img</th>
               <th>Minimum Quantity</th>
               <th>Available Quantity</th>
               <th>Price(PerUnit)</th>

@@ -1,4 +1,8 @@
 import React from "react";
+import image1 from "../../assets/image/image-01.jpg";
+import image2 from "../../assets/image/image-02.jpg";
+import image3 from "../../assets/image/image-03.jpg";
+import image4 from "../../assets/image/image-04.jpg";
 
 const OurTeam = () => {
   return (
@@ -33,11 +37,7 @@ const OurTeam = () => {
           <div className="w-full md:w-1/2 xl:w-1/4 px-4">
             <div className="max-w-[370px] w-full mx-auto mb-10">
               <div className="relative rounded-lg overflow-hidden">
-                <img
-                  src="https://cdn.tailgrids.com/1.0/assets/images/team/team-01/image-01.jpg"
-                  alt="image"
-                  className="w-full"
-                />
+                <img src={image1} alt="Member1" className="w-full" />
                 <div className="absolute w-full bottom-5 left-0 text-center">
                   <div
                     className="
@@ -231,11 +231,7 @@ const OurTeam = () => {
           <div className="w-full md:w-1/2 xl:w-1/4 px-4">
             <div className="max-w-[370px] w-full mx-auto mb-10">
               <div className="relative rounded-lg overflow-hidden">
-                <img
-                  src="https://cdn.tailgrids.com/1.0/assets/images/team/team-01/image-02.jpg"
-                  alt="image"
-                  className="w-full"
-                />
+                <img src={image2} alt="Member2" className="w-full" />
                 <div className="absolute w-full bottom-5 left-0 text-center">
                   <div
                     className="
@@ -429,11 +425,7 @@ const OurTeam = () => {
           <div className="w-full md:w-1/2 xl:w-1/4 px-4">
             <div className="max-w-[370px] w-full mx-auto mb-10">
               <div className="relative rounded-lg overflow-hidden">
-                <img
-                  src="https://cdn.tailgrids.com/1.0/assets/images/team/team-01/image-03.jpg"
-                  alt="image"
-                  className="w-full"
-                />
+                <img src={image3} alt="Member3" className="w-full" />
                 <div className="absolute w-full bottom-5 left-0 text-center">
                   <div
                     className="
@@ -627,11 +619,7 @@ const OurTeam = () => {
           <div className="w-full md:w-1/2 xl:w-1/4 px-4">
             <div className="max-w-[370px] w-full mx-auto mb-10">
               <div className="relative rounded-lg overflow-hidden">
-                <img
-                  src="https://cdn.tailgrids.com/1.0/assets/images/team/team-01/image-04.jpg"
-                  alt="image"
-                  className="w-full"
-                />
+                <img src={image4} alt="Member4" className="w-full" />
                 <div className="absolute w-full bottom-5 left-0 text-center">
                   <div
                     className="
