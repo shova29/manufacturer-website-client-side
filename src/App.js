@@ -20,6 +20,7 @@ import Login from "./Pages/Login/Login";
 import ProtectedRoute from "./Pages/Login/ProtectedRoute";
 import Registration from "./Pages/Login/Registration";
 import RequireAdmin from "./Pages/Login/RequireAdmin";
+import Portfolio from "./Pages/Portfolio/Portfolio";
 import Purchase from "./Pages/Purchase/Purchase";
 import Footer from "./Pages/Shared/Footer";
 import Navbar from "./Pages/Shared/Navbar";
@@ -102,6 +103,7 @@ function App() {
         <Route path="registration" element={<Registration />} />
         <Route path="login" element={<Login />} />
         <Route path="blogs" element={<Blogs />} />
+        <Route path="portfolio" element={<Portfolio />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer></Footer>
