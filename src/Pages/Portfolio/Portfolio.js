@@ -19,9 +19,12 @@ const Portfolio = () => {
           />
         </div>
         <div className="card-body mb-8">
-          <h2 className="text-cyan-600 text-4xl font-bold">Bibi Halima</h2>
-          <h3 className="text-slate-500 text-xl font-bold">
-            Email: <span className="text-secondary">halima2996@gmail.com</span>{" "}
+          <h2 className="text-cyan-600 lg:text-4xl font-bold">Bibi Halima</h2>
+          <h3 className="text-slate-500 lg:text-xl font-bold">
+            Email:{" "}
+            <span className="text-secondary lg:text-xl">
+              halima2996@gmail.com
+            </span>{" "}
           </h3>
           <p className="text-slate-500 text-lg font-bold">
             <span>Address:</span> 260/A, Ahmed Nagar, Middle Paikpara, Mirpur-1,

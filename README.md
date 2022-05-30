@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Winged Wheels
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a full-stack Project based on MERN Full-Stack [Click here for Live Site Link](https://bicycle-manufacturer-website.web.app/)
 
-## Available Scripts
+Can also check Server Site Repo [Click here for Server Site Repo](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-shova29)
 
-In the project directory, you can run:
+## Features and Functionality:
 
-### `npm start`
+- This is a full-stack website about Winged Wheels Manufacturer management website where bicycle parts that are stored and managed.
+- The Home page is consists of header section, banner section, business summary section, featured products, what our beloved client says section, our team member, contact us section, our brand and footer section.
+- The Portflio page provides the information about Myself.
+- The Blogs page contains three questions and their answers.
+- On the Purchase page, users will be able to change the order quantity (increase/decrease) in an input field. The initial value of the quantity will be the minimum order quantity. However, the user won't be able to reduce the quantity below the minimum order quantity mentioned on the tool/part. Also, the order quantity can not be higher than the available quantity.
+- If a user is logged in, they will see another option on the header is called Dashboard. Inside the dashboard, a user (not an admin) will see options like My Orders, Add A Review, My Profile options on the side nav.
+- If an admin logs in, they will not see the options that a user sees except My Profile. This means an admin will not see my orders and add a review link. Instead, an admin will see My Profile, Manage All Orders, Add A Product, Make Admin, Manage Products.
+- An Admin should be able to make another user an admin. If an admin wants, they will be able to add a product on the add a product page. After adding the product, this product will appear on the home page.
+- On the Manage All Orders page for the admin, the logged-in admin will see the orders placed by every user. If multiple users use this website to place orders, everyone's order will be displayed here. The orders that are not paid will show unpaid. And the orders that are paid, an Admin can update the status of a paid order. After placing an order and completing the payment, every order will have a default status: pending. On the Manage All Orders page, an admin will be able to update the status of the pending to shipped status.
+- User can Create an Account using email/password-based authentication and also social signin authentication. Email will be verified.
+- User can Create an Account and Signin via Firebase authentication.
+- User can also Signin via Google signin or Github signin and also reset the password.
+- Here used mongodb atlas noSQL database for hosting inventory data.
+- Fully responsive web app.
+- Highly Protected Route.
+- Used NoSQL Database
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technology Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Font-end
 
-### `npm test`
+1. React JS
+2. Tailwind Daisy
+3. Tailwind flowbites
+4. React Router
+5. Firebase Authentication
+6. React-Firebase-Hooks
+7. React Toastify
+8. React Icons
+9. react-hook-form
+10. React-rating
+11. React-Query
+12. React-Stripe-Js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Back-end
 
-### `npm run build`
+1. Node js
+2. MongoDB
+3. Express js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Hosting
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Client Side Hosted by Firebase
+- Server site hosted by Heroku

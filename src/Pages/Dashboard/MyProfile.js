@@ -71,7 +71,7 @@ const MyProfile = () => {
       <h2 className="text-3xl text-center font-bold text-secondary mt-6 mb-6">
         My Profile
       </h2>
-      <div className="flex lg:max-w-lg mx-auto mb-8">
+      <div className="sm:flex-col md:flex-row lg:max-w-lg mx-auto mb-8">
         <div className="mt-8 mr-6 card lg:w-full max-w-max shadow-xl mb-8">
           <div className="avatar justify-center p-5">
             <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
@@ -136,67 +136,6 @@ const MyProfile = () => {
             />
           </form>
         </div>
-        {/* <div>
-        <input
-          type="checkbox"
-          id="update-profile-modal"
-          className="modal-toggle"
-        />
-        <div className="modal lg:w-1/2 mx-auto">
-          <div className="modal-box w-11/12 max-w-5xl">
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <input
-                type="text"
-                placeholder="Your Education"
-                className="input input-bordered  input-secondary w-full max-w-sm mb-3"
-                {...register("education", { required: true })}
-              />
-              {errors.education?.type === "required" && "Education is required"}
-              <input
-                type="text"
-                placeholder="Your Address"
-                className="input input-bordered  input-secondary w-full max-w-sm mb-3"
-                {...register("address", { required: true })}
-              />
-              {errors.address?.type === "required" && "Address is required"}
-              <input
-                type="number"
-                placeholder="Your Phone Number"
-                className="input input-bordered input-secondary w-full max-w-sm mb-3"
-                {...register("phoneNumber", { required: true })}
-                required
-              />
-              {errors.phoneNumber?.type === "required" &&
-                "Phone Number is required"}
-              <input
-                className="input input-bordered input-secondary w-full max-w-sm mb-3"
-                placeholder="Photo URL"
-                {...register("photoURL")}
-              />
-              {errors.photoURL?.type === "required" && "Photo URL is required"}
-              <input
-                type="url"
-                name="linkedin"
-                placeholder="Your LinkedIn Link"
-                className="input input-bordered input-secondary w-full max-w-sm mb-3"
-                {...register("linkedin", { required: true })}
-              />{" "}
-              {errors.linkedin?.type === "required" &&
-                "LinkedIn Link is required"}
-              <div className="modal-action justify-center">
-                <label
-                  htmlFor="update-profile-modal"
-                  className="btn btn-primary text-white"
-                  disabled={!isValid}
-                  type="submit"
-                >
-                  Update Profile
-                </label>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div> */}
       </div>
     </div>
   );
