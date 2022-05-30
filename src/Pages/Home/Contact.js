@@ -12,7 +12,6 @@ const Contact = () => {
               </span>
               <h2
                 className="
-                  text-slate-500
                     mb-6
                     uppercase
                     font-bold

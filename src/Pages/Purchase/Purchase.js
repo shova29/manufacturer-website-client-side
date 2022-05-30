@@ -59,7 +59,6 @@ const Purchase = () => {
   };
   return (
     <div className="container my-24 px-20 mx-auto">
-      <h2>Details of {parts?.name} </h2>
       <div className="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-8 sm:mb-6">
         <div className="card w-96 bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">

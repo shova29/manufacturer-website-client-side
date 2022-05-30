@@ -16,7 +16,6 @@ const OurTeam = () => {
               </span>
               <h2
                 className="
-                  text-slate-500 
                     font-bold
                     text-3xl
                     sm:text-4xl
@@ -25,7 +24,8 @@ const OurTeam = () => {
                     mb-4
                     "
               >
-                Our Awesome <span className="text-primary text-5xl"> Team</span>
+                Our Awesome{" "}
+                <span className="text-primary lg:text-5xl"> Team</span>
               </h2>
             </div>
           </div>

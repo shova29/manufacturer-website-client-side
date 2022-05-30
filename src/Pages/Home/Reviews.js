@@ -11,9 +11,9 @@ const Reviews = () => {
   }, []);
   return (
     <section className="mt-16 p-6 md:p-12 text-center md:text-left rounded-md">
-      <h2 className="text-slate-500 text-center lg:text-2xl font-bold mt-12">
+      <h2 className="text-gray text-center lg:text-3xl font-bold mt-12">
         What Our{" "}
-        <span className="text-primary text-4xl "> Beloved Client </span> Says
+        <span className="text-primary lg:text-4xl "> Beloved Client </span> Says
       </h2>
       <div className="container mx-auto py-5 mt-8">
         <div className="row justify-content-center mb-3">

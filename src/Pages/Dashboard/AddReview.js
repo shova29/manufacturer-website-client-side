@@ -37,7 +37,10 @@ const AddReview = () => {
 
   return (
     <div className="mb-10 lg:w-2/3 lg:mx-auto">
-      <div className="lg:w-1/2">
+      <h2 className="text-3xl text-center font-bold text-secondary mt-6 mb-6">
+        Add Review
+      </h2>
+      <div className="lg:ml-44 lg:w-1/2">
         <form onSubmit={handleSubmit(onSubmit)}>
           <textarea
             className="input input-bordered input-secondary w-full max-w-lg h-12 mb-3"
@@ -54,7 +57,7 @@ const AddReview = () => {
           <input
             type="number"
             className="input input-bordered input-secondary w-full max-w-lg mb-3"
-            placeholder="Ratings(1 to 5)"
+            placeholder="Ratings (1 to 5)"
             {...register("rating", {
               min: 1,
               max: 5,

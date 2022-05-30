@@ -11,9 +11,9 @@ const Portfolio = () => {
   return (
     <div className="mt-16 mb-24 ml-16 mr-24">
       <div className="container mx-auto card lg:card-side text-center bg-base-100 shadow-xl">
-        <div className="mt-8 ml-16 w-32 h-32 rounded-lg ring ring-primary ring-offset-base-100 ring-offset-2">
+        <div className="mt-8 ml-16 w-32 h-40 rounded-lg ring ring-primary ring-offset-base-100 ring-offset-2">
           <img
-            className="w-32 h-32 rounded-lg"
+            className="w-36 h-40 rounded-lg"
             src={myself}
             alt="Bibi Halima"
           />
@@ -50,9 +50,9 @@ const Portfolio = () => {
         </div>
       </div>
       <div className="mt-16 mb-12 font-bold justify-center lg:justify-start">
-        <p className="text-slate-500 text-4xl text-center mb-12">
+        <h1 className="text-slate-500 text-4xl text-center mb-12">
           My <span className="text-primary">Skills</span>
-        </p>
+        </h1>
       </div>
       <div className="flex flex-wrap justify-center gap-4 mt-12 mb-12">
         <span className="btn btn-base bg-sky-600 hover:bg-sky-700 text-base  px-4 py-2  border-0 text-white">
@@ -80,9 +80,9 @@ const Portfolio = () => {
 
       <section>
         <div class="card mx-auto mt-10">
-          <h1 className="text-slate-500 text-3xl text-center mt-12 mb-6 font-bold ">
+          <h2 className="text-slate-500 text-3xl text-center mt-12 mb-6 font-bold ">
             My <span className="text-primary">Projects</span>
-          </h1>
+          </h2>
           <div className="mt-16 mb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="card bg-white shadow-xl">
               <div class="card-body">
