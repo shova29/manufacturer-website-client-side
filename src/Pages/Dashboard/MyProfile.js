@@ -71,8 +71,9 @@ const MyProfile = () => {
       <h2 className="text-3xl text-center font-bold text-secondary mt-6 mb-6">
         My Profile
       </h2>
-      <div className="sm:flex-col md:flex-row lg:max-w-lg mx-auto mb-8">
-        <div className="mt-8 mr-6 card lg:w-full max-w-max shadow-xl mb-8">
+      <div className="flex flex-col md:flex-row lg:flex-row  items-center justify-around mb-8 gap-4">
+        {/* profile card */}
+        <div className="mt-8 card lg:max-w-[50%] shadow-xl mb-8">
           <div className="avatar justify-center p-5">
             <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
               <img src={myProfile?.photoURL} alt="user" />
@@ -87,8 +88,8 @@ const MyProfile = () => {
             <p className="">LinkedIn: {myProfile?.linkedIn}</p>
           </div>
         </div>
-
-        <div className="xl:ml-8 mb-12 p-6 mt-8 h-full rounded-lg shadow-lg bg-white w-11/12 max-w-5xl">
+        {/* input */}
+        <div className=" mb-12 p-6 mt-8 h-full rounded-lg shadow-lg bg-white lg:max-w-[50%]">
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
               type="text"

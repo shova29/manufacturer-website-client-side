@@ -19,6 +19,7 @@ Can also check Server Site Repo [Click here for Server Site Repo](https://github
 - User can Create an Account and Signin via Firebase authentication.
 - User can also Signin via Google signin or Github signin and also reset the password.
 - Here used mongodb atlas noSQL database for hosting inventory data.
+- Payment Integration.
 - Fully responsive web app.
 - Highly Protected Route.
 - Used NoSQL Database

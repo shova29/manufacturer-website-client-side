@@ -3,7 +3,7 @@ import React from "react";
 const FeaturedPart = ({ part }) => {
   const { name, image, perUnitPrice } = part;
   return (
-    <div class="card w-96 bg-base-100 shadow-xl image-full">
+    <div class="card bg-base-100 shadow-xl image-full">
       <figure>
         <img src={image} alt={name} />
       </figure>
