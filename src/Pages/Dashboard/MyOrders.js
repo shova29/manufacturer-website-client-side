@@ -34,7 +34,7 @@ const MyOrders = () => {
   }, [user, refetch]);
 
   const handleDeletePurchase = (id) => {
-    fetch(`http://localhost:5000/purchase/${id}`, {
+    fetch(`https://evening-escarpment-83437.herokuapp.com/purchase/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

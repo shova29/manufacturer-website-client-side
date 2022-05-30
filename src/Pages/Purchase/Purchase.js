@@ -26,15 +26,7 @@ const Purchase = () => {
     data.quantity = parseInt(getValues("quantity"));
     data.price = parseInt(getValues("quantity")) * parseInt(parts.perUnitPrice);
     data.parts = parts?.name;
-    /*  const purchase = {
-      partId: parts._id,
-      parts: parts.name,
-      userName: user.displayName,
-      userEmail: user.email,
-      address: data.address,
-      phoneNumber: data.phoneNumber,
-    }; */
-    const url = `http://localhost:5000/purchase`;
+    const url = `https://evening-escarpment-83437.herokuapp.com/purchase`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -234,13 +226,6 @@ const Purchase = () => {
               </label>
             </div>
             <div className="text-left lg:text-center">
-              {/* <button
-                type="submit"
-                disabled={!isValid}
-                className="inline-block px-7 py-3 bg-cyan-600 text-white font-medium text-sm  uppercase rounded shadow-md transition duration-150 ease-in-out"
-              >
-                Purchase
-              </button> */}
               <input
                 type="submit"
                 disabled={!isValid}
