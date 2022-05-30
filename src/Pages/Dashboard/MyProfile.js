@@ -22,12 +22,15 @@ const MyProfile = () => {
   const { isLoading, refetch } = useQuery();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/profiles/${user?.email}`, {
-      method: "GET",
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
-      },
-    })
+    fetch(
+      `https://evening-escarpment-83437.herokuapp.com/profiles/${user?.email}`,
+      {
+        method: "GET",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((result) => {
         setReload(!reload);
@@ -37,13 +40,16 @@ const MyProfile = () => {
   }, [user, reload]);
 
   const onSubmit = (data) => {
-    fetch(`http://localhost:5000/profiles/${user?.email}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
+    fetch(
+      `https://evening-escarpment-83437.herokuapp.com/profiles/${user?.email}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    )
       .then((res) => res.json())
       .then((result) => {
         if (result.modifiedCount > 0) {

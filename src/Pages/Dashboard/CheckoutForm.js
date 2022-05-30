@@ -13,14 +13,17 @@ const CheckoutForm = ({ purchase }) => {
   const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/create-payment-intent", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
-      },
-      body: JSON.stringify({ price }),
-    })
+    fetch(
+      "https://evening-escarpment-83437.herokuapp.com/create-payment-intent",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
+        },
+        body: JSON.stringify({ price }),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data?.clientSecret) {
@@ -71,7 +74,7 @@ const CheckoutForm = ({ purchase }) => {
         purchase: _id,
         transactionId: paymentIntent.id,
       };
-      fetch(`http://localhost:5000/purchase/${_id}`, {
+      fetch(`https://evening-escarpment-83437.herokuapp.com/purchase/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",

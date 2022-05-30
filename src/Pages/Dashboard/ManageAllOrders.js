@@ -12,11 +12,13 @@ const ManageAllOrders = () => {
     isLoading,
     refetch,
   } = useQuery("allPurchases", () =>
-    fetch("http://localhost:5000/purchase").then((res) => res.json())
+    fetch("https://evening-escarpment-83437.herokuapp.com/purchase").then(
+      (res) => res.json()
+    )
   );
 
   const handleDelivered = (id) => {
-    fetch(`http://localhost:5000/shipped/${id}`, {
+    fetch(`https://evening-escarpment-83437.herokuapp.com/shipped/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -30,7 +32,7 @@ const ManageAllOrders = () => {
       });
   };
   const handlePurchaseDelete = (id) => {
-    fetch(`http://localhost:5000/purchase/${id}`, {
+    fetch(`https://evening-escarpment-83437.herokuapp.com/purchase/${id}`, {
       method: "DELETE",
       headers: {
         "content-type": "application/json",

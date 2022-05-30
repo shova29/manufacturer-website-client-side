@@ -5,7 +5,7 @@ const useParts = () => {
   const [reload, setReload] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/part`)
+    fetch(`https://evening-escarpment-83437.herokuapp.com/part`)
       .then((response) => response.json())
       .then((data) => {
         setReload(false);

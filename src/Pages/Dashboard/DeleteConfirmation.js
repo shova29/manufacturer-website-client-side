@@ -5,7 +5,7 @@ const DeleteConfirmation = ({ parts, refetch }) => {
   const { name } = parts;
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/products/${id}`, {
+    fetch(`https://evening-escarpment-83437.herokuapp.com/products/${id}`, {
       method: "DELETE",
       headers: {
         "content-type": "application/json",

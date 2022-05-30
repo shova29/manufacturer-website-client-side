@@ -38,7 +38,7 @@ const AddProduct = () => {
             perUnitPrice: parseInt(data.price),
             image: img,
           };
-          fetch(`http://localhost:5000/part`, {
+          fetch(`https://evening-escarpment-83437.herokuapp.com/part`, {
             method: "POST",
             headers: {
               "content-type": "application/json",

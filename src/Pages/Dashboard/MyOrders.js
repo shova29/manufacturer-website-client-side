@@ -12,12 +12,15 @@ const MyOrders = () => {
   const [user] = useAuthState(auth);
   const { isLoading, refetch } = useQuery();
   useEffect(() => {
-    fetch(`http://localhost:5000/myPurchase?email=${user?.email}`, {
-      method: "GET",
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
-      },
-    })
+    fetch(
+      `https://evening-escarpment-83437.herokuapp.com/myPurchase?email=${user?.email}`,
+      {
+        method: "GET",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
+        },
+      }
+    )
       .then((res) => {
         if (res?.status === 401 || res?.status === 403) {
           signOut(auth);
