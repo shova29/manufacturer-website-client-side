@@ -66,7 +66,7 @@ const AddProduct = () => {
       </h2>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="lg:ml-80 mx-auto mb-10"
+        className="form-control justify-center items-center  mb-10 mx-10 lg:mx-0"
       >
         <div className="form-control w-full max-w-sm">
           <label className="label">

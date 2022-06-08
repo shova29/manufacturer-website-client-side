@@ -8,7 +8,7 @@ const Review = ({ productReview }) => {
   return (
     <div className="mx-auto rounded mt-6 mb-6 my-6 ">
       {" "}
-      <div className="md:w-96 w-36 flex justify-center items-center mb-6 lg:mb-0 mx-auto md:mx-0">
+      <div className="w-36 flex justify-center items-center mb-6 lg:mb-0 mx-auto md:mx-0">
         <img
           src={
             image

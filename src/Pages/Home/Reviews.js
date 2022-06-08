@@ -10,7 +10,7 @@ const Reviews = () => {
       .then((data) => setProductReviews(data));
   }, []);
   return (
-    <section className="mt-16 p-6 md:p-12 text-center md:text-left rounded-md">
+    <section className="mt-16 text-center md:text-left rounded-md">
       <h2 className="text-gray text-center lg:text-3xl font-bold mt-12">
         What Our{" "}
         <span className="text-primary lg:text-4xl "> Beloved Client </span> Says

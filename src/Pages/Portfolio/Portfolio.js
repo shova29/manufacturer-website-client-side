@@ -10,7 +10,7 @@ import { FaLinkedin } from "react-icons/fa";
 const Portfolio = () => {
   return (
     <div className="mt-16 mb-24 mx-10 md:mx-24">
-      <div className="container mx-auto card lg:card-side text-center bg-base-100 shadow-xl">
+      <div className="container mx-auto card  text-center bg-base-100 shadow-xl">
         <div className="mt-8 mx-auto w-32 h-40 rounded-lg ring ring-primary ring-offset-base-100 ring-offset-2">
           <img
             className="w-36 h-40 rounded-lg"
