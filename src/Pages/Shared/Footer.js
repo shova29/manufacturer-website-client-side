@@ -10,7 +10,7 @@ import { FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="">
-      <footer className="footer p-10 bg-neutral text-neutral-content">
+      <footer className="sm:h-48 footer p-10 bg-neutral text-white grid grid-cols-2 md:grid-cols-6 gap-4 ">
         <div>
           <span className="footer-title">Services</span>
           <a className="hover:text-primary">Branding</a>
@@ -53,7 +53,7 @@ const Footer = () => {
           <a className="hover:text-primary">Android</a>
         </div>
       </footer>
-      <footer className="footer px-10 py-4 border-t bg-neutral text-neutral-content border-base-300">
+      <footer className="footer px-10 py-4 border-t bg-cyan-700 text-white border-base-300">
         <div className="items-center grid-flow-col">
           <div className="ml-2 w-10 rounded-full">
             <img src={logo} alt={logo} />
@@ -77,7 +77,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="md:place-self-center md:justify-self-end">
-          <div className="grid grid-cols md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <a>
               <FaFacebook className="w-5 h-full mx-auto hover:text-cyan-700" />
             </a>

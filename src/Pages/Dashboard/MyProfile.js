@@ -81,11 +81,11 @@ const MyProfile = () => {
           </div>
           <div className="card-body items-center text-center">
             <h2 className="">{user?.displayName}</h2>
-            <p className="">Email: {user?.email}</p>
+            <a className="">Email: {user?.email}</a>
             <p className="">Education: {myProfile?.education}</p>
             <p className="">Address: {myProfile?.address}</p>
             <p className="">PhoneNumber: {myProfile?.phoneNumber}</p>
-            <p className="">LinkedIn: {myProfile?.linkedIn}</p>
+            <a className="">LinkedIn: {myProfile?.linkedIn}</a>
           </div>
         </div>
         {/* input */}
@@ -109,7 +109,7 @@ const MyProfile = () => {
             />
             {errors.address?.type === "required" && "Address is required"}
             <input
-              type="number"
+              type="tel"
               placeholder="Your Phone Number"
               className="input input-bordered input-secondary w-full max-w-sm mb-3"
               {...register("phoneNumber", { required: true })}

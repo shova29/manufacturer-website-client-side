@@ -27,8 +27,8 @@ const Portfolio = () => {
             </span>{" "}
           </h3>
           <p className="text-slate-500 text-lg font-bold">
-            <span>Address:</span> 260/A, Ahmed Nagar, Middle Paikpara, Mirpur-1,
-            Dhaka-1216
+            <span>Address:</span> Flat#A3, Road#1, Block#B, Hill View Abashik,
+            Panchlaish, Chattogram.
           </p>
           <p className="text-secondary text-lg font-bold">
             <span className="text-slate-500"> Educational: </span>
@@ -38,15 +38,15 @@ const Portfolio = () => {
             <span>Reach me through Social Link</span>
           </p>
           <div className="md:place-self-center md:justify-self-end">
-            <div className="grid grid-cols md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="mt-2 grid grid-cols-3 sm:gap-0 md:gap-4 lg:gap-4">
               <a href="https://www.facebook.com/shovahasan29">
-                <FaFacebook className="w-5 h-full mx-auto text-cyan-600 hover:text-cyan-700" />
+                <FaFacebook className="w-6 h-full mx-auto text-cyan-600 hover:text-cyan-700" />
               </a>
               <a href="https://www.linkedin.com/in/bibi-halima-4b5574154/">
-                <FaLinkedin className="w-5 h-full mx-auto text-cyan-600 hover:text-cyan-700" />
+                <FaLinkedin className="w-6 h-full mx-auto text-cyan-600 hover:text-cyan-700" />
               </a>
               <a href="https://github.com/shova29">
-                <FaGithub className="w-5 h-full mx-auto text-cyan-600 hover:text-cyan-700" />
+                <FaGithub className="w-6 h-full mx-auto text-cyan-600 hover:text-cyan-700" />
               </a>
             </div>
           </div>
