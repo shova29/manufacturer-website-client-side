@@ -13,7 +13,7 @@ const ManageProducts = () => {
     isLoading,
     refetch,
   } = useQuery("products", () =>
-    fetch("https://evening-escarpment-83437.herokuapp.com/products", {
+    fetch("https://manufacturer-website-server-side-shova29.vercel.app/products", {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },

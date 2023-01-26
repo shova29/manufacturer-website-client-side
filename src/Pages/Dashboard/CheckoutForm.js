@@ -14,7 +14,7 @@ const CheckoutForm = ({ purchase }) => {
 
   useEffect(() => {
     fetch(
-      "https://evening-escarpment-83437.herokuapp.com/create-payment-intent",
+      "https://manufacturer-website-server-side-shova29.vercel.app/create-payment-intent",
       {
         method: "POST",
         headers: {
@@ -74,7 +74,7 @@ const CheckoutForm = ({ purchase }) => {
         purchase: _id,
         transactionId: paymentIntent.id,
       };
-      fetch(`https://evening-escarpment-83437.herokuapp.com/purchase/${_id}`, {
+      fetch(`https://manufacturer-website-server-side-shova29.vercel.app/purchase/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",

@@ -26,7 +26,7 @@ const Purchase = () => {
     data.quantity = parseInt(getValues("quantity"));
     data.price = parseInt(getValues("quantity")) * parseInt(parts.perUnitPrice);
     data.parts = parts?.name;
-    const url = `https://evening-escarpment-83437.herokuapp.com/purchase`;
+    const url = `https://manufacturer-website-server-side-shova29.vercel.app/purchase`;
     fetch(url, {
       method: "POST",
       headers: {

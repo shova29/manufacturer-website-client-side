@@ -20,7 +20,7 @@ const AddReview = () => {
     data.name = user?.displayName;
     data.image = user?.photoURL;
     data.rating = parseInt(data.rating);
-    fetch(`https://evening-escarpment-83437.herokuapp.com/reviews`, {
+    fetch(`https://manufacturer-website-server-side-shova29.vercel.app/reviews`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

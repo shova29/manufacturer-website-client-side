@@ -32,7 +32,7 @@ const ManageAllOrders = () => {
       });
   };
   const handlePurchaseDelete = (id) => {
-    fetch(`https://evening-escarpment-83437.herokuapp.com/purchase/${id}`, {
+    fetch(`https://manufacturer-website-server-side-shova29.vercel.app/purchase/${id}`, {
       method: "DELETE",
       headers: {
         "content-type": "application/json",

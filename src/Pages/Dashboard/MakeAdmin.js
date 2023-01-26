@@ -9,7 +9,7 @@ const MakeAdmin = () => {
     isLoading,
     refetch,
   } = useQuery("users", () =>
-    fetch(`https://evening-escarpment-83437.herokuapp.com/user`, {
+    fetch(`https://manufacturer-website-server-side-shova29.vercel.app/user`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

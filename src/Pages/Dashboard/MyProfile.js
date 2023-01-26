@@ -41,7 +41,7 @@ const MyProfile = () => {
 
   const onSubmit = (data) => {
     fetch(
-      `https://evening-escarpment-83437.herokuapp.com/profiles/${user?.email}`,
+      `https://manufacturer-website-server-side-shova29.vercel.app/profiles/${user?.email}`,
       {
         method: "PUT",
         headers: {
@@ -76,7 +76,14 @@ const MyProfile = () => {
         <div className="mt-8 card w-[80%] lg:max-w-[50%] shadow-xl mb-8">
           <div className="avatar justify-center p-5">
             <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-              <img src={myProfile?.photoURL} alt="user" />
+              <img
+                src={
+                  myProfile?.photoURL
+                    ? myProfile?.photoURL
+                    : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png"
+                }
+                alt="user"
+              />
             </div>
           </div>
           <div className="card-body items-center text-center">

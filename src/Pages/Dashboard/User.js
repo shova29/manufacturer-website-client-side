@@ -5,7 +5,7 @@ const User = ({ user, index, refetch }) => {
   const { email, role } = user;
   const makeAdmin = () => {
     fetch(
-      `https://evening-escarpment-83437.herokuapp.com/user/admin/${email}`,
+      `https://manufacturer-website-server-side-shova29.vercel.app/user/admin/${email}`,
       {
         method: "PUT",
         headers: {

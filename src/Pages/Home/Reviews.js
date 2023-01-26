@@ -5,7 +5,7 @@ const Reviews = () => {
   const [productReviews, setProductReviews] = useState([]);
 
   useEffect(() => {
-    fetch(`https://evening-escarpment-83437.herokuapp.com/reviews`)
+    fetch(`https://manufacturer-website-server-side-shova29.vercel.app/reviews`)
       .then((res) => res.json())
       .then((data) => setProductReviews(data));
   }, []);
